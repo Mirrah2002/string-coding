@@ -1,3 +1,4 @@
+//Method 1: Two-Pointer Technique (Most Efficient)
 export function twoPointerMethod(str) {
     const cleanStr = str.toLowerCase();
     let left = 0;
@@ -13,6 +14,7 @@ export function twoPointerMethod(str) {
     return true;
 }
 
+//Method 2: Built-In Array Methods (Most Concise)
 export function builtInArrayMethod(str) {
     const cleanStr = str.toLowerCase();
     const reversed = cleanStr.split('').reverse().join('');
@@ -20,6 +22,7 @@ export function builtInArrayMethod(str) {
     return cleanStr === reversed;
 }
 
+//Method 3: Manual Loop (No Built-in Reversal)
 export function manualLoopMethod(str) {
     const cleanStr = str.toLowerCase();
     let reversed = "";
@@ -31,6 +34,7 @@ export function manualLoopMethod(str) {
     return cleanStr === reversed;
 }
 
+//Method 4: Recursion
 export function recursionMethod(str) {
     const cleanStr = str.toLowerCase();
 

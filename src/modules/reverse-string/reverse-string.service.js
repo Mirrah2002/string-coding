@@ -2,7 +2,7 @@
  * Reverse String Implementation Methods
  */
 
-// 1. Decrementing for loop
+// Method 1: Decrementing For Loop
 export function reverseWithDecrementLoop(str) {
     let reversed = "";
     // Start at the last index and loop backwards to 0
@@ -12,7 +12,7 @@ export function reverseWithDecrementLoop(str) {
     return reversed;
 }
 
-// 2. Incrementing For .. of Loop
+// Method 2: Incrementing For...of Loop
 export function reverseWithForOfLoop(str) {
     let reversed = "";
     // Loop through each character of the string
@@ -22,7 +22,7 @@ export function reverseWithForOfLoop(str) {
     return reversed;
 }
 
-// 3. Recursion
+// Method 3: Recursion
 export function reverseWithRecursion(str) {
     // Base case: if the string has 0 or 1 character, return it directly
     if (str.length <= 1) {
