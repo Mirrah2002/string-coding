@@ -9,9 +9,8 @@ import globalErrorHandler from './src/utils/globalErrorHandler.js';
 const app = express();
 app.use(express.json());
 
-// String routes (accessible at /api/reverse/... and /reverse/...)
-app.use('/api', stringRoutes);
-app.use('/', stringRoutes);
+app.use('/api/string', stringRoutes);
+app.use('/string', stringRoutes);
 
 app.all('*any', (req, res, next) => {
     const err = new customError(`Not Found ${req.originalUrl}`, 404);

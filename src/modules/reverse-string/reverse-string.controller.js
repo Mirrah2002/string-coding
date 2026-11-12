@@ -34,12 +34,13 @@ export const reverseStringController = (req, res, next) => {
                 reversed = reverseWithRecursion(String(inputString));
                 break;
             default:
-                return next(new customError(`Invalid method "${method}". Supported methods are: ${VALID_METHODS.join(', ')}`, 400));
+                return next(new customError(`Invalid method "${method}". Supported methods are: ${available_methods.join(', ')}`, 400));
                 // reversed = reverseWithDecrementLoop(String(inputString));
         }
 
         res.status(200).json({
             status: 'success',
+            message: 'String Reversed Successfully',
             data: {
                 original: String(inputString),
                 reversed,
